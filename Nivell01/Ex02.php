@@ -25,9 +25,6 @@ A l'arxiu main defineix dos objectes, un triangle i un rectangle i truca al mèt
         }
 
         class Triangle extends Shape {
-            public function __construct($ample, $alt) {
-                parent::__construct($ample, $alt);
-            }
 
             public function area() {
                 $area = ($this->alt * $this->ample) / 2;
@@ -36,9 +33,6 @@ A l'arxiu main defineix dos objectes, un triangle i un rectangle i truca al mèt
         }
 
         class Rectangle extends Shape {
-            public function __construct($ample, $alt) {
-                parent::__construct($ample, $alt);
-            }
 
             public function area() {
                 $area = ($this->alt * $this->ample);

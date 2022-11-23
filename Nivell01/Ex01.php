@@ -16,12 +16,12 @@
         public $nom;
         public $sou;
 
-        function initialize ($nom, $sou) {
+        function initialize($nom, $sou) {
             $this->nom = $nom;
             $this->sou = $sou;
         }
 
-        function print () {
+        function print() {
             echo "$this->nom. <br>";
 
             if ($this->sou > 6000) {
@@ -31,6 +31,15 @@
             }
         }
     }
+
+    $employee1 = new Employee();
+    $employee1->initialize('pep', 4302);
+    $employee2 = new Employee();
+    $employee2->initialize('andreu', 7201);
+
+    $employee1->print();
+    $employee2->print();
+
 
     ?>
 </body>
