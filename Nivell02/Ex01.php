@@ -10,17 +10,13 @@
     <?php
 
     class PokerDice {
-        public $cares;
+        public static $cares = array('As', 'K', 'Q', 'J', '7', '8');
         public $cara;
         public static $timesThrown = 0;
 
-        public function __construct(){
-            $this->cares = array('As', 'K', 'Q', 'J', '7', '8');
-        }
-
     public function throw(){
-            $caraRandom = array_rand($this->cares, 2);
-            $this->cara = $this->cares[$caraRandom[0]];
+            $caraRandom = array_rand(self::$cares, 2);
+            $this->cara = self::$cares[$caraRandom[0]];
             self::$timesThrown++;
         }
     

@@ -10,12 +10,11 @@
     <?php
 
     class PokerDice {
-        public $cares;
+        public static $cares = array('As', 'K', 'Q', 'J', '7', '8');
         public $cara;
         public $timesThrown;
 
         public function __construct(){
-            $this->cares = array('As', 'K', 'Q', 'J', '7', '8');
             $this->timesThrown = 0;
         }
 
@@ -23,8 +22,8 @@
         return $this->timesThrown;
     }
     public function throw(){
-            $caraRandom = array_rand($this->cares, 2);
-            $this->cara = $this->cares[$caraRandom[0]];
+            $caraRandom = array_rand(self::$cares, 2);
+            $this->cara = self::$cares[$caraRandom[0]];
             $this->timesThrown++;
         }
     
